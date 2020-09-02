@@ -10,9 +10,6 @@ class label {
     this.color = color;
     this.labelShow = true; // blink status
   }
-  setHotKey(hotKey) {
-    this.hotKey = hotKey;
-  }
 }
 
 class projectManager {
@@ -42,7 +39,6 @@ class projectManager {
   getColorbyLabelID(labelID) {
     return this.labelColors[labelID];
   }
-  ㅅ;
 
   getLabelIDbyColor(color) {
     return Object.keys(this.labelColors).find((key) => this.labelColors[key] === color);
@@ -58,14 +54,6 @@ class projectManager {
 
   colorAlreadyOccupied(color) {
     return Object.values(this.labelColors).includes(color);
-  }
-
-  appendLabel() {
-    throw new Error('appendLabel() not implemented');
-  }
-
-  deleteLabel() {
-    throw new Error('deleteLabel() not implemented');
   }
 }
 
